@@ -20,5 +20,10 @@
 }
 
 .player_progress{
-    width: 380px;
+    width: 80%;
+}
+
+.player_box p {
+    color: #af1d3b;
+    font-weight: bold;
 }

@@ -13,6 +13,7 @@ function App() {
     const damage = [5, 8, 10]
     const [money, setMoney] = useState(100)
     const [autoAttackActive, setAutoAttackActive] =useState(false);
+    const [gameOver, setGameOver] = useState(false);
 
     const [monsters, setMonsters] = useState( [
         {
@@ -37,9 +38,8 @@ function App() {
 
 
 
-    function selectMonster(index, health){
+    function selectMonster(index){
         setMonsterId(index); // Track the selected monster's index
-
     }
 
     function attack() {
@@ -69,16 +69,16 @@ function App() {
 
             console.log(monstrDamage)
 
-            if (playerLife <= 0) {
-                clearInterval(interval); // Stop the interval when playerlife reaches 0
-            }
-
             return playerLife;
 
         }, 4000)
+        if (playerLife <= 0) {
+            setGameOver(true);
+            clearInterval(interval);
+        }
 
         return () => clearInterval(interval)
-    }, [playerLife])
+    }, [playerLife, gameOver])
 
     // ==== Upgrades === //
     function resetLife(price){
@@ -103,6 +103,7 @@ function App() {
             const newMoney = money - price
             setMoney(newMoney)
             setPlayerLife(50)
+            setGameOver(false);
         }
     }
 
@@ -245,7 +246,7 @@ function App() {
 
               <div className="bottom_con">
                   <div className="left_col">
-                      <Player life={playerLife} />
+                      <Player life={playerLife} gameOver={gameOver}/>
                   </div>
                   <div className="right_col">
                       <Products addMonster={addMonster}

@@ -24,11 +24,11 @@
 }
 
 .mnstr_progress{
-    width: 170px;
+    width: 90%;
 }
 
 .dmg_info{
-    width: 100%;
+    width: 90%;
     height: 15%;
     padding: 10px;
     display: flex;

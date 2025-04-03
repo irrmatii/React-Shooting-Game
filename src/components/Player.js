@@ -6,9 +6,13 @@ const Player = (props) => {
     return (
         <div className="player_box">
             <div className="top_col"></div>
-            <div className="life_bar player_progress">
-                <div className="progress" style={{width: `${props.life}%`}}>{props.life}%</div>
-            </div>
+            {props.gameOver ? (
+                <p>GAME OVER</p>
+            ) : (
+                <div className="life_bar player_progress">
+                    <div className="progress" style={{width: `${props.life}%`}}>{props.life}%</div>
+                </div>
+            )}
         </div>
     );
 };
