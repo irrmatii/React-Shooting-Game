@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React-Shooting-Game/static/css/main.7d10eb21.css",
+    "main.js": "/React-Shooting-Game/static/js/main.8a784e7e.js",
+    "static/media/Thing-from-the-stars-optimized.webp": "/React-Shooting-Game/static/media/Thing-from-the-stars-optimized.61118cd7b5650691a4ad.webp",
+    "static/media/Shuffling-horror-optmized.webp": "/React-Shooting-Game/static/media/Shuffling-horror-optmized.d6a53aff631a403efede.webp",
+    "index.html": "/React-Shooting-Game/index.html",
+    "main.7d10eb21.css.map": "/React-Shooting-Game/static/css/main.7d10eb21.css.map",
+    "main.8a784e7e.js.map": "/React-Shooting-Game/static/js/main.8a784e7e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d10eb21.css",
+    "static/js/main.8a784e7e.js"
+  ]
+}
